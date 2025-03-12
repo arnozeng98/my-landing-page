@@ -1,224 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <!-- 设置字符集为 UTF-8，设置浏览器兼容性 -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
     <!-- 设置视口宽度，并允许缩放 -->
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
     <!-- 设置网站图标 -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <!-- 设置苹果触摸图标 -->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon.ico" />
+
     <!-- 设置网页标题 -->
     <title>Arno Zeng</title>
-    
+
     <!-- 设置网站描述和关键词 -->
-    <meta name="description" content="Arno Zeng">
-    <meta name="keywords" content="Arno Zeng">
-    
-    <!-- 设置苹果触摸图标 -->
-    <link rel="apple-touch-icon-precomposed">
-    
+    <meta name="description" content="Arno Zeng" />
+    <meta name="keywords" content="Arno Zeng" />
+
     <!-- 引入 CSS 样式表 -->
-    <link rel="stylesheet" type="text/css" href="css/h.9c69ed6c.css">
-    <link rel="stylesheet" type="text/css" href="css/nekotora.99cf6f8c.css">
-    
+    <link rel="stylesheet" type="text/css" href="css/h.9c69ed6c.css" />
+    <link rel="stylesheet" type="text/css" href="css/nekotora.99cf6f8c.css" />
+
     <!-- Google Analytics脚本 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ER589L2B9M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ER589L2B9M"
+    ></script>
     <script>
-        // 配置 Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-ER589L2B9M');
+      // 配置 Google Analytics
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ER589L2B9M");
     </script>
+  </head>
 
-</head>
+  <!-- 禁止右键菜单 -->
 
-<!-- 禁止右键菜单 -->
-<body onContextMenu="alert('禁止查看源代码，您的行为已记录。'); return false" 
-NOOP="if (window.event != null && window.event.button == 2) alert ('Thanks...');">
-
+  <body
+    onContextMenu="alert('禁止查看源代码，您的行为已记录。'); return false"
+    NOOP="if (window.event != null && window.event.button == 2) alert ('Thanks...');"
+  >
     <!-- 导航栏 -->
     <nav>
-    <a href="#" class="active">arnozeng</a>
-    <a class="clip"></a>
-    <a href="https://blog.arnozeng.com/">Blog</a>
-    <a class="clip"></a>
-    <a href="https://drive.arnozeng.com">Drive</a>
+      <a href="#" class="active">arnozeng</a>
+      <a class="clip"></a>
+      <a href="https://blog.arnozeng.com/">Blog</a>
+      <a class="clip"></a>
+      <a href="https://docs.arnozeng.com">Docs</a>
+      <a class="clip"></a>
+      <a href="https://drive.arnozeng.com">Drive</a>
     </nav>
 
     <!-- 引入 toastr 库的 CSS 和 JS 文件 -->
-    <link href="css/toastr.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/toastr.min.css" rel="stylesheet">
+    <link href="css/toastr.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/toastr.min.css" rel="stylesheet" />
     <script src="js/toastr.min.js"></script>
 
     <style>
-        /* 自定义 toastr 通知框样式 */
-        .toast-bottom-center {
+      /* 自定义 toastr 通知框样式 */
+      .toast-bottom-center {
         position: absolute;
-        left:  30px;
+        left: 30px;
         right: 10px;
-        top:   20px;
-        }
+        top: 20px;
+      }
     </style>
 
     <!-- 背景画布 -->
     <div class="background">
-        <canvas id="startrack"></canvas>
-        <div class="cover"></div>
+      <canvas id="startrack"></canvas>
+      <div class="cover"></div>
     </div>
 
     <!-- 主体内容 -->
     <div class="main">
-        <div class="ch intro">
-            <div class="container">
-                <div class="hello">
-                    <h1 id="slogan">思考中...</h1>
-                    <h2>
-                        <div class="circle">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        Arno Zeng
-                    </h2>
-                </div>
-            </div>
+      <div class="ch intro">
+        <div class="container">
+          <div class="hello">
+            <h1 id="slogan">思考中...</h1>
+            <h2>
+              <div class="circle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              Arno Zeng
+            </h2>
+          </div>
         </div>
+      </div>
 
-        <div class="ch about">
-            <div class="container">
-                <h2 class="chtitle">Who is <span>Arno</span>?</h2>
-                <div class="clear">
-                    <div class="introduct">
-                        <img class="avatar" src="images/arno.jpg" alt="Arno">
-                        <P>每个人都有属于自己的一片森林，也许我们从来不曾走过，但它一直在那里，总会在那里。
-                           迷失的人迷失了，相逢的人会再相逢。</p>
-                        <p style="padding-bottom:1em;"></p>
-                        <p>你好，这里是居无定所、四海为家的Arno，正在努力奔小康。Arno比较熟悉数据中心的虚拟化、容器、容灾、备份、多租、全栈管理等产品。现在正在学习计算语言学（Computational Linguistics），计划未来转战NLP和LLM，希望在这人工智能爆发的年代，能喝上一口汤。</p>
-                        <p style="padding-bottom:1em;"></p>
-                        <p>希望能早日过上衣食无忧的生活。</p>
-                        <div class="chatbox">
-                            <div class="line loading">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <ul class="skill clear">
-    
-                        <li>
-                            <p>R</p>
-                            <div class="progress">
-                                <div style="width:78%;"></div>
-                                <span>数据分析的能力</span>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <p>AI</p>
-                            <div class="progress">
-                                <div style="width:55%;"></div>
-                                <span>使用现代AI工具的能力</span>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <p>Python</p>
-                            <div class="progress">
-                                <div style="width:60%;"></div>
-                                <span>赞美最好的语言程度的能力</span>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <p>折腾</p>
-                            <div class="progress">
-                                <div style="width:65%;"></div>
-                                <span>让自己舒服程度的能力</span>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <p>世界</p>
-                            <div class="progress">
-                                <div style="width:20%;"></div>
-                                <span>观测世界程度的能力</span>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <p>搞事情</p>
-                            <div class="progress">
-                                <div style="width:82%;"></div>
-                                <span>让事情发生程度的能力</span>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <p>魔法</p>
-                            <div class="progress">
-                                <div style="width:12%;"></div>
-                                <span>和普通人相同程度的能力</span>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <p>MoePower</p>
-                            <div class="progress">
-                                <div style="width:99%;"></div>
-                                <span>成为萌二程度的能力</span>
-                            </div>
-                        </li>
-    
-                    </ul>
-                    
+      <div class="ch about">
+        <div class="container">
+          <h2 class="chtitle">Who is <span>Arno</span>?</h2>
+          <div class="clear">
+            <div class="introduct">
+              <img class="avatar" src="images/arno.jpg" alt="Arno" />
+              <p>
+                每个人都有属于自己的一片森林，也许我们从来不曾走过，但它一直在那里，总会在那里。
+                迷失的人迷失了，相逢的人会再相逢。
+              </p>
+              <p style="padding-bottom: 1em"></p>
+              <p>
+                你好，我是Arno，本科毕业于密歇根州立大学统计学专业，硕士毕业于不列颠哥伦比亚大学计算语言学专业。
+              </p>
+              <p style="padding-bottom: 1em"></p>
+              <p>
+                人生旅途中并非总是一帆风顺。2023年末，我曾历经自主创业的挫败，跌落至人生谷底——抑郁、迷惘、作息紊乱，
+                甚至沉迷于烟酒与逃避现实。然而，正是那段暗淡的时光，让我重新认识自我，并于2024年破茧重生。
+                我不仅幸运地进入了的大厂，事业顺遂，收获了健康的人际关系，更喜获理想学府的硕士录取通知，
+                重拾了久违的自信与热情，再次意气风发地迈向人生的新篇章。
+              </p>
+              <p style="padding-bottom: 1em"></p>
+              <p>
+                未来之路依旧充满未知与挑战，而我仍在这崎岖又迷人的道路上砥砺前行。
+                愿与你共勉之，愿我们都能无惧荆棘，怀抱理想，不断前进。
+              </p>
+              <div class="chatbox">
+                <div class="line loading">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
+              </div>
             </div>
-        </div>
 
-        <div class="gate ch">
-            <div class="container links">
-                <h2 class="chtitle">Arno的<span>邻居</span>们</h2>
-                <div class="clear">
-                    <a href="https://blog.arnozeng.com/" target="_blank">
-                        <div class="item">
-                            <div class="avatar"> <img src="images/arno.jpg"> </div>
-                            <div class="inner">
-                                <h5>ArnoのSite</h5>
-                                <p>努力奔小康</p>
-                            </div>
-                        </div>
-                    </a>
-
+            <ul class="skill clear">
+              <li>
+                <p>Python / R</p>
+                <div class="progress">
+                  <div style="width: 100%"></div>
+                  <span>编码能力</span>
                 </div>
-            </div>
+              </li>
+
+              <li>
+                <p>AI</p>
+                <div class="progress">
+                  <div style="width: 90%"></div>
+                  <span>使用现代AI工具的能力</span>
+                </div>
+              </li>
+
+              <li>
+                <p>Machine Learning</p>
+                <div class="progress">
+                  <div style="width: 80%"></div>
+                  <span>机器学习的能力</span>
+                </div>
+              </li>
+
+              <li>
+                <p>折腾</p>
+                <div class="progress">
+                  <div style="width: 90%"></div>
+                  <span>让自己舒服程度的能力</span>
+                </div>
+              </li>
+
+              <li>
+                <p>Deep Learning</p>
+                <div class="progress">
+                  <div style="width: 80%"></div>
+                  <span>深度学习的能力</span>
+                </div>
+              </li>
+
+              <li>
+                <p>世界</p>
+                <div class="progress">
+                  <div style="width: 10%"></div>
+                  <span>和普通人相同的能力</span>
+                </div>
+              </li>
+
+              <li>
+                <p>NLP</p>
+                <div class="progress">
+                  <div style="width: 80%"></div>
+                  <span>自然语言处理的能力</span>
+                </div>
+              </li>
+
+              <li>
+                <p>MoePower</p>
+                <div class="progress">
+                  <div style="width: 100%"></div>
+                  <span>成为萌二程度的能力</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        
+      </div>
+      <div class="find ch">
+        <div class="container links">
+          <h2 class="chtitle">Arno<span>生活</span>的地方</h2>
+          <div class="clear col-3">
+            <a href="https://arnozeng.com" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #28a9e0"></div>
+                <div class="inner"><span>主页</span></div>
+              </div>
+            </a>
+            <a href="https://blog.arnozeng.com" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #28a9e0"></div>
+                <div class="inner"><span>博客</span></div>
+              </div>
+            </a>
+            <a href="https://docs.arnozeng.com" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #28a9e0"></div>
+                <div class="inner"><span>作品集</span></div>
+              </div>
+            </a>
+          </div>
+          <div class="clear">
+            <a
+              href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=641307317"
+              target="_blank"
+            >
+              <div class="item">
+                <div class="bg" style="background-color: #12b7f5"></div>
+                <div class="inner">
+                  <i class="icon-qq"></i>
+                  <span>QQ</span>
+                </div>
+              </div>
+            </a>
+            <a href="mailto:arnozeng@outlook.com" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #0078d4"></div>
+                <div class="inner">
+                  <i class="icon-mail"></i> <span>Mail</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://weibo.com/arnozeng" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #ff8200"></div>
+                <div class="inner">
+                  <i class="icon-weibo"></i> <span>Weibo</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://space.bilibili.com/7914396/" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #fb7299"></div>
+                <div class="inner">
+                  <i class="icon-bilibili"></i>
+                  <span>Bilibili</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://x.com/arnozeng" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #1da1f2"></div>
+                <div class="inner">
+                  <i class="icon-twitter"></i> <span>Twitter</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.zhihu.com/people/arnozeng" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #0084ff"></div>
+                <div class="inner">
+                  <i class="icon-zhihu"></i>
+                  <span>知乎</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://bangumi.tv/user/arnozeng" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #fb7299"></div>
+                <div class="inner">
+                  <i class="icon-bookmark"></i> <span>Bangumi</span>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://music.163.com/#/user/home?id=284103050"
+              target="_blank"
+            >
+              <div class="item">
+                <div class="bg" style="background-color: #f12d35"></div>
+                <div class="inner">
+                  <i class="icon-netease_music"></i>
+                  <span>网易云音乐</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://github.com/arnozeng98" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #181717"></div>
+                <div class="inner">
+                  <i class="icon-github"></i> <span>Github</span>
+                </div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/arno.zeng/" target="_blank">
+              <div class="item">
+                <div class="bg" style="background-color: #d62976"></div>
+                <div class="inner">
+                  <i class="icon-instagram"></i> <span>Instgram</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="gate ch">
+        <div class="container links">
+          <h2 class="chtitle">Arno的<span>邻居</span>们</h2>
+          <div class="clear">
+            <a href="https://blog.arnozeng.com/" target="_blank">
+              <div class="item">
+                <div class="avatar"><img src="images/arno.jpg" /></div>
+                <div class="inner">
+                  <h5>ArnoのSite</h5>
+                  <p>苦厄难夺凌云志</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="footer ch">
-        <div class="container">
-            <h3>Arno Zeng</h3>
-            <p>蘑菇森林的尽头，新世界的起点</p>
-            <p class="c"><a href="#">Say hello to Arno @ </a></p>
-        </div>
+      <div class="container">
+        <h3>Arno Zeng</h3>
+        <p>蘑菇森林的尽头，新世界的起点</p>
+        <p class="c"><a href="#">Say hello to Arno @ </a></p>
+      </div>
     </div>
 
     <script src="js/page.3a0791a3.js"></script>
     <script type="text/javascript" src="js/stats.js" charset="UTF-8"></script>
 
     <audio autoplay>
-        <source src="https://music.163.com/#/my/m/music/playlist?id=7806672166" type="audio/mpeg">
+      <source
+        src="https://music.163.com/#/my/m/music/playlist?id=7806672166"
+        type="audio/mpeg"
+      />
     </audio>
-
-</body>
+  </body>
 </html>
