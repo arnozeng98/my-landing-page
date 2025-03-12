@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- 设置字符集为 UTF-8，设置浏览器兼容性 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <!-- 设置视口宽度，并允许缩放 -->
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- 设置网站图标 -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <!-- 设置网页标题 -->
+    <title>Arno Zeng</title>
+    
+    <!-- 设置网站描述和关键词 -->
+    <meta name="description" content="Arno Zeng">
+    <meta name="keywords" content="Arno Zeng">
+    
+    <!-- 设置苹果触摸图标 -->
+    <link rel="apple-touch-icon-precomposed">
+    
+    <!-- 引入 CSS 样式表 -->
+    <link rel="stylesheet" type="text/css" href="css/h.9c69ed6c.css">
+    <link rel="stylesheet" type="text/css" href="css/nekotora.99cf6f8c.css">
+    
+    <!-- Google Analytics脚本 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ER589L2B9M"></script>
+    <script>
+        // 配置 Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ER589L2B9M');
+    </script>
+
+</head>
+
+<!-- 禁止右键菜单 -->
+<body onContextMenu="alert('禁止查看源代码，您的行为已记录。'); return false" 
+NOOP="if (window.event != null && window.event.button == 2) alert ('Thanks...');">
+
+    <!-- 导航栏 -->
+    <nav>
+    <a href="#" class="active">arnozeng</a>
+    <a class="clip"></a>
+    <a href="https://blog.arnozeng.com/">Blog</a>
+    <a class="clip"></a>
+    <a href="https://drive.arnozeng.com">Drive</a>
+    </nav>
+
+    <!-- 引入 toastr 库的 CSS 和 JS 文件 -->
+    <link href="css/toastr.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/toastr.min.css" rel="stylesheet">
+    <script src="js/toastr.min.js"></script>
+
+    <style>
+        /* 自定义 toastr 通知框样式 */
+        .toast-bottom-center {
+        position: absolute;
+        left:  30px;
+        right: 10px;
+        top:   20px;
+        }
+    </style>
+
+    <!-- 背景画布 -->
+    <div class="background">
+        <canvas id="startrack"></canvas>
+        <div class="cover"></div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="main">
+        <div class="ch intro">
+            <div class="container">
+                <div class="hello">
+                    <h1 id="slogan">思考中...</h1>
+                    <h2>
+                        <div class="circle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        Arno Zeng
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="ch about">
+            <div class="container">
+                <h2 class="chtitle">Who is <span>Arno</span>?</h2>
+                <div class="clear">
+                    <div class="introduct">
+                        <img class="avatar" src="images/arno.jpg" alt="Arno">
+                        <P>每个人都有属于自己的一片森林，也许我们从来不曾走过，但它一直在那里，总会在那里。
+                           迷失的人迷失了，相逢的人会再相逢。</p>
+                        <p style="padding-bottom:1em;"></p>
+                        <p>你好，这里是居无定所、四海为家的Arno，正在努力奔小康。Arno比较熟悉数据中心的虚拟化、容器、容灾、备份、多租、全栈管理等产品。现在正在学习计算语言学（Computational Linguistics），计划未来转战NLP和LLM，希望在这人工智能爆发的年代，能喝上一口汤。</p>
+                        <p style="padding-bottom:1em;"></p>
+                        <p>希望能早日过上衣食无忧的生活。</p>
+                        <div class="chatbox">
+                            <div class="line loading">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <ul class="skill clear">
+    
+                        <li>
+                            <p>R</p>
+                            <div class="progress">
+                                <div style="width:78%;"></div>
+                                <span>数据分析的能力</span>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <p>AI</p>
+                            <div class="progress">
+                                <div style="width:55%;"></div>
+                                <span>使用现代AI工具的能力</span>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <p>Python</p>
+                            <div class="progress">
+                                <div style="width:60%;"></div>
+                                <span>赞美最好的语言程度的能力</span>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <p>折腾</p>
+                            <div class="progress">
+                                <div style="width:65%;"></div>
+                                <span>让自己舒服程度的能力</span>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <p>世界</p>
+                            <div class="progress">
+                                <div style="width:20%;"></div>
+                                <span>观测世界程度的能力</span>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <p>搞事情</p>
+                            <div class="progress">
+                                <div style="width:82%;"></div>
+                                <span>让事情发生程度的能力</span>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <p>魔法</p>
+                            <div class="progress">
+                                <div style="width:12%;"></div>
+                                <span>和普通人相同程度的能力</span>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <p>MoePower</p>
+                            <div class="progress">
+                                <div style="width:99%;"></div>
+                                <span>成为萌二程度的能力</span>
+                            </div>
+                        </li>
+    
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="gate ch">
+            <div class="container links">
+                <h2 class="chtitle">Arno的<span>邻居</span>们</h2>
+                <div class="clear">
+                    <a href="https://blog.arnozeng.com/" target="_blank">
+                        <div class="item">
+                            <div class="avatar"> <img src="images/arno.jpg"> </div>
+                            <div class="inner">
+                                <h5>ArnoのSite</h5>
+                                <p>努力奔小康</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer ch">
+        <div class="container">
+            <h3>Arno Zeng</h3>
+            <p>蘑菇森林的尽头，新世界的起点</p>
+            <p class="c"><a href="#">Say hello to Arno @ </a></p>
+        </div>
+    </div>
+
+    <script src="js/page.3a0791a3.js"></script>
+    <script type="text/javascript" src="js/stats.js" charset="UTF-8"></script>
+
+    <audio autoplay>
+        <source src="https://music.163.com/#/my/m/music/playlist?id=7806672166" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>
