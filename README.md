@@ -1,43 +1,64 @@
-# Arno 的个人主页
+# Arno's Landing Page
 
-## 项目结构
+A modern, responsive personal landing page website for showcasing professional profile, skills, and portfolio links.
 
-- css：存放网站的 CSS 样式文件，比如 nekotora.99cf6f8c.css，用于定义字体及图标样式
-- js：存放 JavaScript 脚本文件，负责页面动态效果、统计和交互逻辑
-- images：存放图片资源，如网站图标和背景图片
-- README.md：项目说明文档
+## Features
 
-### 目录结构示例
+- **Responsive Design**: Adapts seamlessly to all device sizes and screen resolutions
+- **Interactive UI**: Dynamic elements with smooth animations and transitions
+- **Canvas Background**: Beautiful starry background with interactive particle effects
+- **Custom Typography**: Utilizing the "Nekotora" custom font family for unique styling
+- **Skills Visualization**: Visual representation of skills with progress bars
+- **Modern CSS**: Organized styling with modular CSS architecture
+- **Cross-browser Compatibility**: Works on all major browsers
+- **Analytics Integration**: Includes Google Analytics for visitor tracking
 
-```plaintext
-.
-├── css
-│   ├── h.9c69ed6c.css
-│   └── nekotora.99cf6f8c.css
-├── js
-│   ├── page.3a0791a3.js
-│   └── stats.js
-├── images
-│   ├── favicon.ico
-│   └── arno.jpg
-└── README.md
+## Project Structure
+
+```bash
+my-landing-page/
+├── assets/               # Static assets
+│   ├── arno.jpg          # Profile image
+│   └── favicon.ico       # Website favicon
+├── css/                  # Stylesheet files
+│   ├── h.9c69ed6c.css    # Main stylesheet
+│   └── nekotora.99cf6f8c.css # Custom styling
+├── fonts/                # Custom font files
+│   ├── nekotora.4ea5ebe6.woff2
+│   ├── nekotora.54f9b137.eot
+│   ├── nekotora.9106c612.woff
+│   └── nekotora.28169ea4.ttf
+├── js/                   # JavaScript files
+│   ├── page.3a0791a3.js  # Main application logic
+│   └── stats.js          # Analytics tracking
+├── CNAME                 # Custom domain configuration
+├── index.html            # Main entry point
+├── LICENSE               # License information
+└── README.md             # Project documentation
 ```
 
-## 使用技术
+## Technical Implementation
 
-- HTML5、CSS3、JavaScript
-- Google Analytics：用于网站数据统计
-- Toastr：用于消息通知展示
-- HTML5 Audio：用于音频播放支持
-- 响应式设计和前端优化技术：提高页面性能和用户体验
+- **Modular JavaScript**: Organized with Parcel bundler for efficient code splitting
+- **Canvas Rendering**: Interactive particle system with optimized rendering
+- **CSS Preprocessors**: Compiled from source for optimal performance
+- **Custom Web Fonts**: Self-hosted with multiple formats for cross-browser support
+- **SEO Optimized**: Proper meta tags and semantic HTML structure
+- **Minimal Dependencies**: Lightweight implementation with minimal external libraries
 
-## 代码逻辑
+## Deployment
 
-- HTML 文件构建页面的整体结构，模块化的导航栏、主体内容及页脚设计便于维护和扩展。
-- CSS 文件负责视觉展示、响应式布局和特殊效果的实现，采用合理的类命名规范以提升可读性。
-- JavaScript 文件主要处理页面交互逻辑、动画效果和数据统计，通过事件监听及异步加载优化用户体验。
-- 资源管理通过 CDN、缓存等技术手段进行优化，确保页面加载快速且稳定。
+The website is configured for deployment on GitHub Pages with a custom domain setup through the CNAME file.
 
-## 详细介绍
+## Development
 
-本项目基于现代前端技术构建，将页面划分为多个功能模块，通过简洁的代码和详细的注释实现易维护、易扩展的开发体验。不同模块之间通过接口进行数据交互，确保整体代码的高内聚低耦合。项目同时注重用户体验与性能优化，使用多种优化手段提升访问速度与稳定性。
+To work on this project locally:
+
+1. Clone the repository
+2. Open `index.html` in your browser for simple testing
+3. Make changes to HTML, CSS, or JS files as needed
+4. Push changes to GitHub to automatically deploy through GitHub Pages
+
+## License
+
+See the [LICENSE](https://github.com/arnozeng98/my-landing-page/blob/main/LICENSE) file for details.
