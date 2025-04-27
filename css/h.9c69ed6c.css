@@ -358,6 +358,41 @@ ul.skill li .progress div {
   color: #fff;
   text-decoration: none;
 }
+.projects .links .item {
+  position: relative;
+  width: 27.17%;
+  height: 240px;
+  line-height: 20px;
+  border-radius: 5px;
+  background-color: hsla(0, 0%, 100%, 0.05);
+  margin: 10px 1.2%;
+  padding: 20px 20px;
+  text-align: center;
+  float: left;
+  transition: all 0.2s;
+  opacity: 1;
+}
+.projects .links .item:hover {
+  opacity: 1;
+  transform: translateY(-10px);
+  -webkit-animation: index-link-active 1s
+    cubic-bezier(0.315, 0.605, 0.375, 0.925) forwards;
+  animation: index-link-active 1s cubic-bezier(0.315, 0.605, 0.375, 0.925)
+    forwards;
+}
+.projects .links .item .inner {
+  position: relative;
+  z-index: 5;
+}
+.projects .links .item .inner h5 {
+  font-weight: 400;
+  font-size: 17px;
+}
+.projects .links .item .inner p {
+  font-size: 13px;
+  text-align: left;
+  color: hsla(0, 0%, 100%, 0.8);
+}
 .find .links .item {
   position: relative;
   width: 17.6%;
@@ -387,7 +422,7 @@ ul.skill li .progress div {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 1.8%;
+  height: 3%;
   z-index: 0;
   transition: all 0.15s;
 }
@@ -669,6 +704,13 @@ ul.skill li .progress div {
   }
   .about ul.skill li {
     width: 100%;
+  }
+  .projects .links .item {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
   }
   .find .links .item,
   .gate .links .item {
